@@ -21,13 +21,6 @@ fun String?.lessThan(minLengthResId: Int): Boolean {
     return this?.length ?: 0 < length
 }
 
-fun String.isInvalidPassword(): Int {
-    if (isNullOrEmpty()) return R.string.error_empty_password
-    return if (length < getAppContext().resources.getInteger(R.integer.min_password))
-        R.string.error_invalid_password
-    else 0
-}
-
 fun String.isInvalidEmail(): Int {
     if (isNullOrEmpty()) return R.string.error_empty_email
     return if (!Patterns.EMAIL_ADDRESS.matcher(this).matches()) R.string.error_invalid_email
