@@ -59,7 +59,7 @@ open class RegisterVm(context: Application) : BaseViewModel(context) {
             emailError.set("")
 
             when (val res = repo.register(data)) {
-                is Resource.Success<*> -> onSuccess(res)
+                is Resource.Success -> onSuccess(res)
                 is Resource.Error -> res.message?.let { onError(it) }
             }
         }

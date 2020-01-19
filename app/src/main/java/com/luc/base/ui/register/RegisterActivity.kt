@@ -49,6 +49,7 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun enableLoginButton() {
         bind.lForm.alpha = 0.5f
+        bind.lForm.isEnabled = false
         bind.bLogin.visibility = View.VISIBLE
     }
 
