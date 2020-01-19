@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="editTextStyle">@style/EditText</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+    </style>
+
+    <style name="SplashScreenStyle" parent="Theme.AppCompat.NoActionBar"></style>
+
+    <style name="Toolbar" parent="ThemeOverlay.MaterialComponents.ActionBar">
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+    <!--Dialog-->
+    <style name="AppTheme.Dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Dialog.Normal">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+    </style>
+
+    <style name="AppTheme.Dialog.Alert" parent="AppTheme.Dialog">
+        <item name="android:windowTitleStyle">@style/AppTheme.Dialog.Alert.Title</item>
+        <item name="android:textColorPrimary">@color/text</item>
+    </style>
+
+    <style name="AppTheme.Dialog.Alert.Title">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+    </style>
+</resources>

@@ -1,38 +1,5 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="editTextStyle">@style/EditText</item>
-        <item name="buttonStyle">@style/Button</item>
-    </style>
-
-    <!--Dialog-->
-    <style name="AppTheme.Dialog" parent="Theme.AppCompat.Light.Dialog">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
-    <style name="AppTheme.Dialog.Normal">
-        <item name="android:windowIsFloating">true</item>
-        <item name="android:windowContentOverlay">@null</item>
-        <item name="android:windowTitleStyle">@null</item>
-    </style>
-
-    <style name="AppTheme.Dialog.Alert" parent="AppTheme.Dialog">
-        <item name="android:windowTitleStyle">@style/AppTheme.Dialog.Alert.Title</item>
-        <item name="android:textColorPrimary">@color/text</item>
-    </style>
-
-    <style name="AppTheme.Dialog.Alert.Title">
-        <item name="android:textColor">@color/colorAccent</item>
-        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
-    </style>
-
     <style name="Clickable">
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
@@ -46,5 +13,69 @@
     <style name="Button" parent="Widget.AppCompat.Button">
         <item name="android:backgroundTint">@color/colorPrimary</item>
         <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Input-->
+    <style name="Input">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!--Other setting-->
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:inputType">textPersonName</item>
+    </style>
+
+
+    <style name="Input.Phone" parent="Input">
+        <item name="android:digits">@string/digit_phone</item>
+        <!--<item name="android:hint">@string/hint_phone</item>-->
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">@integer/max_phone</item>
+    </style>
+
+    <style name="Input.Password" parent="Input">
+        <!--<item name="android:hint">@string/hint_password</item>-->
+        <!--        <item name="android:fontFamily">sans-serif</item>-->
+        <item name="android:inputType">textPassword</item>
+        <item name="android:maxLength">@integer/max_password</item>
+    </style>
+
+    <style name="Input.Pin" parent="Input">
+        <item name="android:digits">@string/digit_phone</item>
+        <!--<item name="android:hint">@string/hint_pin</item>-->
+        <item name="android:inputType">numberPassword</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:maxLength">@integer/max_pin</item>
+    </style>
+
+    <style name="Input.Name" parent="Input">
+        <item name="android:digits">@string/digit_name</item>
+        <!--<item name="android:hint">@string/hint_name</item>-->
+        <item name="android:inputType">textCapWords</item>
+        <item name="android:maxLength">@integer/max_name</item>
+    </style>
+
+    <style name="Input.Email" parent="Input">
+        <item name="android:digits">@string/digit_email</item>
+        <!--<item name="android:hint">@string/hint_email</item>-->
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:maxLength">@integer/max_email</item>
+    </style>
+
+    <style name="Input.Nominal" parent="Input">
+        <item name="android:digits">@string/digit_nominal</item>
+        <!--<item name="android:hint">@string/hint_nominal</item>-->
+        <item name="android:inputType">numberSigned</item>
+        <item name="android:maxLength">@integer/max_nominal</item>
     </style>
 </resources>

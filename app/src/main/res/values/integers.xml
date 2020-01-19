@@ -1,0 +1,49 @@
+<resources>
+    <!-- Min values -->
+    <integer name="min_nominal">10000</integer>
+    <integer name="min_transfer_balance_nominal">10000</integer>
+    <integer name="min_income">500000</integer>
+
+    <!-- Min lengths -->
+    <integer name="min_phone">10</integer>
+    <integer name="min_password">4</integer>
+    <integer name="min_name">3</integer>
+    <integer name="min_pin">6</integer>
+    <integer name="min_otp">5</integer>
+    <integer name="min_last_name">1</integer>
+    <integer name="min_account_number">5</integer>
+    <integer name="min_bill_number">6</integer>
+    <integer name="min_branch_name">6</integer>
+    <integer name="min_age">18</integer>
+    <integer name="min_pensioner_number">8</integer>
+    <integer name="min_ktp">10</integer>
+    <integer name="min_post_code">5</integer>
+    <integer name="min_bank_name">3</integer>
+
+    <!-- Max lengths -->
+    <integer name="max_input">32</integer>
+    <integer name="max_name">32</integer>
+    <integer name="max_email">32</integer>
+    <integer name="max_phone">15</integer>
+    <integer name="max_voucher">16</integer>
+    <integer name="max_nominal">18</integer>
+    <integer name="max_atm">16</integer>
+    <integer name="max_ktp">16</integer>
+    <integer name="max_pensioner_number">15</integer>
+    <integer name="max_account_number">16</integer>
+    <integer name="max_pin">6</integer>
+    <integer name="max_postal_code">5</integer>
+    <integer name="max_otp">6</integer>
+    <integer name="max_password">32</integer>
+    <integer name="max_percentage">5</integer>
+    <integer name="max_age">90</integer>
+    <integer name="max_income">10</integer>
+    <integer name="max_instantion">56</integer>
+    <integer name="max_message">1000</integer>
+
+    <integer name="max_qty">99</integer>
+    <integer name="max_review">320</integer>
+    <integer name="max_topup_nominal">9</integer>
+    <integer name="max_custom_topup">2000000</integer>
+    <integer name="max_custom_topup_no_premium">250000</integer>
+</resources>
