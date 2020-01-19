@@ -1,0 +1,72 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "/Users/venmup/AndroidStudioProjects/registration",
+      "sdkFolder": "/Users/venmup/Library/Android/sdk",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "/Users/venmup/AndroidStudioProjects/registration/app/build/intermediates",
+      "gradleModulePathName": ":app",
+      "moduleRootFolder": "/Users/venmup/AndroidStudioProjects/registration/app",
+      "makeFile": "/Users/venmup/AndroidStudioProjects/registration/app/src/main/cpp/CMakeLists.txt",
+      "buildSystem": "CMAKE",
+      "compilerSettingsCacheFolder": "/Users/venmup/AndroidStudioProjects/registration/.cxx",
+      "cxxFolder": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx",
+      "ndkFolder": "/Users/venmup/Library/Android/sdk/ndk/20.0.5594570",
+      "ndkVersion": "20.0.5594570",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [],
+    "cFlagList": [],
+    "cppFlagsList": [
+      "-DMOCK"
+    ],
+    "variantName": "mockRelease",
+    "soFolder": "/Users/venmup/AndroidStudioProjects/registration/app/build/intermediates/cmake/mockRelease/lib",
+    "objFolder": "/Users/venmup/AndroidStudioProjects/registration/app/build/intermediates/cmake/mockRelease/obj",
+    "jsonFolder": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/mockRelease",
+    "gradleBuildOutputFolder": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cxx/mockRelease",
+    "isDebuggableEnabled": false,
+    "validAbiList": [
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64"
+    ],
+    "buildTargetSet": []
+  },
+  "abi": "ARM64_V8A",
+  "abiPlatformVersion": 21,
+  "cxxBuildFolder": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/mockRelease/arm64-v8a",
+  "jsonFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/mockRelease/arm64-v8a/android_gradle_build.json",
+  "gradleBuildOutputFolder": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cxx/mockRelease/arm64-v8a",
+  "objFolder": "/Users/venmup/AndroidStudioProjects/registration/app/build/intermediates/cmake/mockRelease/obj/arm64-v8a",
+  "buildCommandFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/mockRelease/arm64-v8a/build_command.txt",
+  "buildOutputFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/mockRelease/arm64-v8a/build_output.txt",
+  "modelOutputFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/mockRelease/arm64-v8a/build_model.json",
+  "cmake": {
+    "cmakeListsWrapperFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cxx/mockRelease/arm64-v8a/CMakeLists.txt",
+    "toolchainWrapperFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cxx/mockRelease/arm64-v8a/android_gradle_build.toolchain.cmake",
+    "buildGenerationStateFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cxx/mockRelease/arm64-v8a/build_generation_state.json",
+    "cacheKeyFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cxx/mockRelease/arm64-v8a/compiler_cache_key.json",
+    "compilerCacheUseFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cxx/mockRelease/arm64-v8a/compiler_cache_use.json",
+    "compilerCacheWriteFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cxx/mockRelease/arm64-v8a/compiler_cache_write.json",
+    "toolchainSettingsFromCacheFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cxx/mockRelease/arm64-v8a/compiler_settings_cache.cmake",
+    "cmakeWrappingBaseFolder": "."
+  },
+  "jsonGenerationLoggingRecordFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/mockRelease/arm64-v8a/json_generation_record.json",
+  "compileCommandsJsonFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/mockRelease/arm64-v8a/compile_commands.json"
+}

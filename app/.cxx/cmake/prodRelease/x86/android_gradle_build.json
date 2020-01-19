@@ -1,0 +1,42 @@
+{
+  "stringTable": {
+    "0": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/prodRelease/x86",
+    "1": "--target=i686-none-linux-android21 --gcc-toolchain=/Users/venmup/Library/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/venmup/Library/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dnative_lib_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -DPROD -O2 -DNDEBUG -fPIC"
+  },
+  "buildFiles": [
+    "/Users/venmup/Library/Android/sdk/ndk/20.0.5594570/build/cmake/platforms.cmake",
+    "/Users/venmup/AndroidStudioProjects/registration/app/src/main/cpp/CMakeLists.txt",
+    "/Users/venmup/Library/Android/sdk/ndk/20.0.5594570/build/cmake/android.toolchain.cmake"
+  ],
+  "cleanCommands": [
+    "/Users/venmup/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/prodRelease/x86\" clean"
+  ],
+  "buildTargetsCommand": "/Users/venmup/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/prodRelease/x86\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "native-lib-Release-x86": {
+      "buildCommand": "/Users/venmup/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/prodRelease/x86\" native-lib",
+      "buildType": "release",
+      "toolchain": "3542357411",
+      "abi": "x86",
+      "artifactName": "native-lib",
+      "files": [
+        {
+          "src": "/Users/venmup/AndroidStudioProjects/registration/app/src/main/cpp/native-lib.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "/Users/venmup/AndroidStudioProjects/registration/app/build/intermediates/cmake/prodRelease/obj/x86/libnative-lib.so"
+    }
+  },
+  "toolchains": {
+    "3542357411": {
+      "cppCompilerExecutable": "/Users/venmup/Library/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

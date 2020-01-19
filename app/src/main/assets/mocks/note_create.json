@@ -1,0 +1,28 @@
+{
+  "servers": [
+    {
+      "env": "DEV",
+      "country": "TH",
+      "team": "Partnership",
+      "baseurl": "https://172.29.226.69"
+    },
+    {
+      "env": "DEV",
+      "country": "TH",
+      "team": "Onboarding",
+      "baseurl": "https://172.29.226.66"
+    },
+    {
+      "env": "DEV",
+      "country": "ID",
+      "team": "Onboarding1",
+      "baseurl": "https://172.29.226.66"
+    },
+    {
+      "env": "DEV",
+      "country": "ID",
+      "team": "Onboarding2",
+      "baseurl": "https://172.29.226.66"
+    }
+  ]
+}

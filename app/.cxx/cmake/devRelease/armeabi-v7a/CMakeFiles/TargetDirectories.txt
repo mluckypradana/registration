@@ -1,0 +1,3 @@
+/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/devRelease/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/devRelease/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/devRelease/armeabi-v7a/CMakeFiles/native-lib.dir

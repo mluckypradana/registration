@@ -1,0 +1,72 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "/Users/venmup/AndroidStudioProjects/registration",
+      "sdkFolder": "/Users/venmup/Library/Android/sdk",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "/Users/venmup/AndroidStudioProjects/registration/app/build/intermediates",
+      "gradleModulePathName": ":app",
+      "moduleRootFolder": "/Users/venmup/AndroidStudioProjects/registration/app",
+      "makeFile": "/Users/venmup/AndroidStudioProjects/registration/app/src/main/cpp/CMakeLists.txt",
+      "buildSystem": "CMAKE",
+      "compilerSettingsCacheFolder": "/Users/venmup/AndroidStudioProjects/registration/.cxx",
+      "cxxFolder": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx",
+      "ndkFolder": "/Users/venmup/Library/Android/sdk/ndk/20.0.5594570",
+      "ndkVersion": "20.0.5594570",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [],
+    "cFlagList": [],
+    "cppFlagsList": [
+      "-DMOCK"
+    ],
+    "variantName": "mockDebug",
+    "soFolder": "/Users/venmup/AndroidStudioProjects/registration/app/build/intermediates/cmake/mockDebug/lib",
+    "objFolder": "/Users/venmup/AndroidStudioProjects/registration/app/build/intermediates/cmake/mockDebug/obj",
+    "jsonFolder": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/mockDebug",
+    "gradleBuildOutputFolder": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cxx/mockDebug",
+    "isDebuggableEnabled": true,
+    "validAbiList": [
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64"
+    ],
+    "buildTargetSet": []
+  },
+  "abi": "X86",
+  "abiPlatformVersion": 21,
+  "cxxBuildFolder": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/mockDebug/x86",
+  "jsonFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/mockDebug/x86/android_gradle_build.json",
+  "gradleBuildOutputFolder": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cxx/mockDebug/x86",
+  "objFolder": "/Users/venmup/AndroidStudioProjects/registration/app/build/intermediates/cmake/mockDebug/obj/x86",
+  "buildCommandFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/mockDebug/x86/build_command.txt",
+  "buildOutputFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/mockDebug/x86/build_output.txt",
+  "modelOutputFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/mockDebug/x86/build_model.json",
+  "cmake": {
+    "cmakeListsWrapperFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cxx/mockDebug/x86/CMakeLists.txt",
+    "toolchainWrapperFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cxx/mockDebug/x86/android_gradle_build.toolchain.cmake",
+    "buildGenerationStateFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cxx/mockDebug/x86/build_generation_state.json",
+    "cacheKeyFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cxx/mockDebug/x86/compiler_cache_key.json",
+    "compilerCacheUseFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cxx/mockDebug/x86/compiler_cache_use.json",
+    "compilerCacheWriteFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cxx/mockDebug/x86/compiler_cache_write.json",
+    "toolchainSettingsFromCacheFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cxx/mockDebug/x86/compiler_settings_cache.cmake",
+    "cmakeWrappingBaseFolder": "."
+  },
+  "jsonGenerationLoggingRecordFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/mockDebug/x86/json_generation_record.json",
+  "compileCommandsJsonFile": "/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/mockDebug/x86/compile_commands.json"
+}

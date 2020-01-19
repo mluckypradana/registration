@@ -1,0 +1,3 @@
+/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/devRelease/x86/CMakeFiles/rebuild_cache.dir
+/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/devRelease/x86/CMakeFiles/edit_cache.dir
+/Users/venmup/AndroidStudioProjects/registration/app/.cxx/cmake/devRelease/x86/CMakeFiles/native-lib.dir
