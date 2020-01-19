@@ -17,6 +17,13 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bind = DataBindingUtil.setContentView(this, R.layout.activity_register)
         bind.vm = vm
+        bind.bProceed.setOnClickListener {
+            vm.register(
+                {},
+                {},
+                {}
+            )
+        }
         setSupportActionBar(bind.toolbar.toolbar)
     }
 }

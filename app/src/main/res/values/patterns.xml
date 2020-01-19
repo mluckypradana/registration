@@ -1,0 +1,3 @@
+<resources>
+    <string name="pattern_phone" translatable="false">^$|^[0]{1}\\d{9,15}$</string>
+</resources>

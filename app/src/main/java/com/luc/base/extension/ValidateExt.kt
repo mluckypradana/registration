@@ -3,11 +3,14 @@ package com.luc.base.extension
 import android.util.Patterns
 import com.luc.base.R
 import com.luc.base.core.extension.getAppContext
+import com.luc.base.core.extension.getString
 
 fun String.isInvalidPhone(): Int {
     if (isNullOrEmpty()) return R.string.error_empty_phone
     var resId = 0
     if (lessThan(R.integer.min_phone))
+        resId = R.string.error_invalid_phone
+    if (!matches(Regex(getString(R.string.pattern_phone))))
         resId = R.string.error_invalid_phone
     return resId
 }

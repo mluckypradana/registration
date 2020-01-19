@@ -24,6 +24,7 @@ import java.util.*
 
 open class RegisterVm(context: Application) : BaseViewModel(context) {
     var data: ObservableField<User> = ObservableField()
+    var mobileNumberError: ObservableField<String> = ObservableField(null)
     var confirmPassword = MutableLiveData("")
     private val repo: UserRepo by inject()
     private val genderNames = getAppContext().resources.getStringArray(R.array.gender_name)
@@ -32,24 +33,25 @@ open class RegisterVm(context: Application) : BaseViewModel(context) {
         data = ObservableField(User())
     }
 
-    fun postProfile(
-        isEdit: Boolean? = false,
-        onValidate: (String) -> Unit,
+    fun register(
+        onValidate: () -> Unit,
         onError: (Resource<User>) -> Unit,
         onSuccess: (Resource<User>) -> Unit
     ) = viewModelScope.launch {
-        val editProfile = isEdit ?: false
         val data = data.get() ?: User()
         val phoneInvalid = data.mobile.orEmpty().isInvalidPhone()
         val passwordInvalid = data.password.orEmpty().isInvalidPassword()
         data.apply {
-            val errorResId = when {
-
-                else -> 0
+            var errorResId = -1
+            when {
+                phoneInvalid == 0 -> mobileNumberError.set(getString(phoneInvalid))
+                else -> errorResId = 0
             }
             if (errorResId != 0) {
-                onValidate(getString(errorResId))
+                onValidate()
                 return@launch
+            } else {
+                mobileNumberError.set(null)
             }
         }
 
