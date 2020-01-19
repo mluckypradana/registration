@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.luc.base.R
 import com.luc.base.core.helper.Common
+import com.luc.base.database.entity.User
 import com.luc.base.databinding.ActivityRegisterBinding
 import com.luc.base.helper.ProfileHelper
 import com.luc.base.ui.register.RegisterVm
@@ -36,6 +37,8 @@ class RegisterActivity : AppCompatActivity() {
                 }
             )
         }
+        bind.rbMale.setOnClickListener { vm.setGender(User.GENDER_MALE) }
+        bind.rbFemale.setOnClickListener { vm.setGender(User.GENDER_FEMALE) }
         bind.etDob.setOnClickListener {
             helper.pickDate(this, vm.getMinAgeForDatePicker()) {
                 vm.setDob(it)
@@ -50,8 +53,8 @@ class RegisterActivity : AppCompatActivity() {
         bind.bLogin.visibility = View.VISIBLE
     }
 
-    fun showProgress() = Common.showProgressDialog(this, R.string.message_loading)
+    private fun showProgress() = Common.showProgressDialog(this, R.string.message_loading)
 
-    fun hideProgress() = Common.dismissProgressDialog()
+    private fun hideProgress() = Common.dismissProgressDialog()
 
 }

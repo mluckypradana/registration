@@ -23,4 +23,9 @@ open class User {
     var birthDate: String? = null
 
     fun getFormattedBirthDate() = DateHelper.reformat(birthDate)
+
+    companion object {
+        const val GENDER_MALE = "m"
+        const val GENDER_FEMALE = "f"
+    }
 }

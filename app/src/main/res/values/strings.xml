@@ -46,6 +46,8 @@
     <string name="error_invalid_email">Please enter valid email</string>
     <string name="error_empty_first_name">Please enter first name</string>
     <string name="error_empty_last_name">Please last name</string>
+    <string name="label_male">Male</string>
+    <string name="label_female">Female</string>
 
     <string-array name="gender_name">
         <item>Laki-laki</item>

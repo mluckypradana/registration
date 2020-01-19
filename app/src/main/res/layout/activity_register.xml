@@ -94,22 +94,31 @@
 
                     </com.google.android.material.textfield.TextInputLayout>
 
-
-                    <com.google.android.material.textfield.TextInputLayout
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        app:hintEnabled="false">
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space"
+                        android:text="@string/label_gender" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/et_gender"
-                            style="@style/Input"
-                            android:layout_width="match_parent"
+                    <RadioGroup
+                        android:id="@+id/radioGroupNb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_male"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:focusableInTouchMode="false"
-                            android:hint="@string/label_gender"
-                            android:text="@{vm.getGender(vm.data.gender)}" />
+                            android:text="@string/label_male" />
 
-                    </com.google.android.material.textfield.TextInputLayout>
+                        <RadioButton
+                            android:id="@+id/rb_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space"
+                            android:text="@string/label_female" />
+                    </RadioGroup>
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
