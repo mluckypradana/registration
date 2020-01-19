@@ -6,7 +6,7 @@ import com.luc.base.database.dao.NoteDao
 import com.luc.base.database.entity.Note
 
 // Annotates class to be a Room Database with a table (entity) of the Word class
-@Database(entities = [Note::class], version = 3)
+@Database(entities = [Note::class], version = 3, exportSchema = false)
 abstract class MyRoomDatabase : RoomDatabase() {
     abstract fun noteDao(): NoteDao
 

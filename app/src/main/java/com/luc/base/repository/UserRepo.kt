@@ -13,7 +13,6 @@ open class UserRepo : BaseRepository() {
             val response = api.login(phone, password)
             if (response.isSuccessful) {
                 val res: BaseResp<User> = response.getResponse()
-                sessionStorage.saveAccessToken(res.data?.token)
                 Resource.Success(res.data, res.message)
             } else
                 Resource.Error(getErrorMessage(response))
@@ -27,7 +26,6 @@ open class UserRepo : BaseRepository() {
             val response = api.register(data)
             if (response.isSuccessful) {
                 val res = response.getResponse()
-                data.password = null
                 Resource.Success(res.data, res.message)
             } else
                 Resource.Error(getErrorMessage(response))

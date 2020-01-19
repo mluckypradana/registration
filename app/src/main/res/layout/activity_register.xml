@@ -30,10 +30,10 @@
                 android:orientation="vertical"
                 android:padding="@dimen/content">
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:clickable="true"
                     android:orientation="vertical">
 
 
@@ -58,6 +58,7 @@
 
                         <com.google.android.material.textfield.TextInputEditText
                             style="@style/Input.Name"
+                            errorMessage="@{vm.firstNameError}"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/label_first_name"
@@ -71,6 +72,7 @@
 
                         <com.google.android.material.textfield.TextInputEditText
                             style="@style/Input.Name"
+                            errorMessage="@{vm.lastNameError}"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/label_last_name"
@@ -133,7 +135,6 @@
                         android:text="@string/action_register" />
 
                 </LinearLayout>
-
 
                 <Button
                     android:id="@+id/b_login"

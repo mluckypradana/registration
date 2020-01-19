@@ -3,7 +3,6 @@ package com.luc.base.ui.register
 import android.app.Application
 import androidx.databinding.InverseMethod
 import androidx.databinding.ObservableField
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.luc.base.R
 import com.luc.base.api.Resource
@@ -13,7 +12,7 @@ import com.luc.base.core.extension.getAppContext
 import com.luc.base.core.extension.getString
 import com.luc.base.database.entity.User
 import com.luc.base.database.entity.Value
-import com.luc.base.extension.isInvalidPassword
+import com.luc.base.extension.isInvalidEmail
 import com.luc.base.extension.isInvalidPhone
 import com.luc.base.helper.DateHelper
 import com.luc.base.repository.UserRepo
@@ -24,8 +23,10 @@ import java.util.*
 
 open class RegisterVm(context: Application) : BaseViewModel(context) {
     var data: ObservableField<User> = ObservableField()
-    var mobileNumberError: ObservableField<String> = ObservableField(null)
-    var confirmPassword = MutableLiveData("")
+    var mobileNumberError: ObservableField<String> = ObservableField("")
+    var firstNameError: ObservableField<String> = ObservableField("")
+    var lastNameError: ObservableField<String> = ObservableField("")
+    var emailError: ObservableField<String> = ObservableField("")
     private val repo: UserRepo by inject()
     private val genderNames = getAppContext().resources.getStringArray(R.array.gender_name)
 
@@ -34,30 +35,30 @@ open class RegisterVm(context: Application) : BaseViewModel(context) {
     }
 
     fun register(
-        onValidate: () -> Unit,
-        onError: (Resource<User>) -> Unit,
+        onError: (String) -> Unit,
         onSuccess: (Resource<User>) -> Unit
     ) = viewModelScope.launch {
         val data = data.get() ?: User()
-        val phoneInvalid = data.mobile.orEmpty().isInvalidPhone()
-        val passwordInvalid = data.password.orEmpty().isInvalidPassword()
+        val phoneInvalid = data.mobile.isInvalidPhone()
+        val emailInvalid = data.email.isInvalidEmail()
         data.apply {
-            var errorResId = -1
             when {
-                phoneInvalid == 0 -> mobileNumberError.set(getString(phoneInvalid))
-                else -> errorResId = 0
-            }
-            if (errorResId != 0) {
-                onValidate()
-                return@launch
-            } else {
-                mobileNumberError.set(null)
+                phoneInvalid != 0 -> mobileNumberError.set(getString(phoneInvalid))
+                firstName.isEmpty() -> firstNameError.set(getString(R.string.error_empty_first_name))
+                lastName.isEmpty() -> lastNameError.set(getString(R.string.error_empty_last_name))
+                emailInvalid != 0 -> emailError.set(getString(emailInvalid))
+                else -> {
+                    mobileNumberError.set("")
+                    firstNameError.set("")
+                    lastNameError.set("")
+                    emailError.set("")
+                }
             }
         }
 
         when (val res = repo.register(data)) {
             is Resource.Success<*> -> onSuccess(res)
-            is Resource.Error -> onError(res)
+            is Resource.Error -> res.message?.let { onError(it) }
         }
     }
 
@@ -87,9 +88,4 @@ open class RegisterVm(context: Application) : BaseViewModel(context) {
     }
 
     fun getMinAgeForDatePicker(): Int = getAppContext().resources.getInteger(R.integer.min_age) * -1
-
-    fun setProvince(value: Value) = data.get()?.apply {
-        province = value.title
-        provinceId = value.value
-    }
 }

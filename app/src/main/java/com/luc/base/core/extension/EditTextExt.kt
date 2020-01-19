@@ -5,6 +5,6 @@ import androidx.databinding.BindingAdapter
 
 
 @BindingAdapter("errorMessage")
-fun EditText.errorMessage(message: String) {
-    error = message
+fun EditText.errorMessage(message: String?) {
+    error = if (message.isNullOrEmpty()) null else message
 }
