@@ -1,4 +1,4 @@
-package com.luc.base.ui
+package com.luc.base.ui.register
 
 import android.os.Bundle
 import android.view.View
@@ -9,7 +9,6 @@ import com.luc.base.core.helper.Common
 import com.luc.base.database.entity.User
 import com.luc.base.databinding.ActivityRegisterBinding
 import com.luc.base.helper.ProfileHelper
-import com.luc.base.ui.register.RegisterVm
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class RegisterActivity : AppCompatActivity() {

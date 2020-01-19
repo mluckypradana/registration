@@ -5,13 +5,11 @@ import com.google.gson.reflect.TypeToken
 import com.luc.base.App
 import com.luc.base.R
 import com.luc.base.core.api.ApiService
+import com.luc.base.core.api.ErrorResp
 import com.luc.base.core.extension.getString
 import com.luc.base.core.helper.Common
-import com.luc.base.core.helper.JwtHelper
 import com.luc.base.core.helper.SessionStorage
 import com.luc.base.core.helper.toGson
-import com.luc.base.event.AutoLogoutEvent
-import org.greenrobot.eventbus.EventBus
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 import retrofit2.Response
@@ -32,6 +30,9 @@ open class BaseRepository : KoinComponent {
             return message().toGson(type)
         } else
             body() ?: BaseResp()
+    }
+
+    private fun autoLogout() {
     }
 
     open fun <T> fromJSonList(json: String?, myType: Class<T>?): List<T> {
@@ -67,17 +68,8 @@ open class BaseRepository : KoinComponent {
     }
 
 
-    fun str(resId: Int): String {
-        return getString(resId)
-    }
+    fun str(resId: Int): String = getString(resId)
 
-    private fun autoLogout() {
-        EventBus.getDefault().post(AutoLogoutEvent())
-    }
-
-    protected fun encrypt(param: Any?): String {
-        return JwtHelper.encoded(param)
-    }
 }
 
 private fun <T> String.toGson(clazz: Type?): BaseResp<T> {

@@ -9,22 +9,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.luc.base.R
 import com.luc.base.core.Constant
-import com.luc.base.core.control.ActivityController
 import com.luc.base.core.helper.Common
-import com.luc.base.event.AutoLogoutEvent
-import com.luc.base.ui.MainActivity
 import org.greenrobot.eventbus.EventBus
-import org.greenrobot.eventbus.Subscribe
-import org.greenrobot.eventbus.ThreadMode
 
 abstract class BaseActivity : AppCompatActivity() {
 
     private lateinit var grantResult: (Int, PermissionResult) -> Unit
 
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    open fun onAutoLogout(event: AutoLogoutEvent) {
-        ActivityController.navigateWithClearTop(this, MainActivity::class.java)
-    }
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)

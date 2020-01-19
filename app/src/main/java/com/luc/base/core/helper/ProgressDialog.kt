@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.luc.base.R
 import com.luc.base.core.extension.getString
-import kotlinx.android.synthetic.main.dia_progress.view.*
+import kotlinx.android.synthetic.main.dialog_progress.view.*
 
 
 /**
@@ -43,7 +43,7 @@ class ProgressDialog(context: Context) {
 
     init {
         val nullParent: ViewGroup? = null
-        view = LayoutInflater.from(context).inflate(R.layout.dia_progress, nullParent)
+        view = LayoutInflater.from(context).inflate(R.layout.dialog_progress, nullParent)
         dialog = dialog(context, R.style.AppTheme_Dialog_Normal)
         dialog.setCanceledOnTouchOutside(false)
         dialog.setCancelable(false)

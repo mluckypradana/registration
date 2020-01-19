@@ -8,7 +8,7 @@ import com.luc.base.helper.DateHelper
  */
 open class User {
     @SerializedName("id")
-    var id: Int? = 0
+    var id: Int? = null
     @SerializedName("first_name")
     var firstName: String = ""
     @SerializedName("last_name")

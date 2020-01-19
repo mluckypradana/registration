@@ -20,11 +20,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
-            android:name=".ui.RegisterActivity"
+            android:name=".ui.register.RegisterActivity"
             android:label="@string/title_activity_register"
             android:theme="@style/AppTheme.NoActionBar">
 
             <tools:validation testUrl="http://mluckypradana.id" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,8 +42,6 @@
                     android:scheme="http" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.notify.NotifyActivity" />
-        <activity android:name=".ui.MainActivity" />
     </application>
 
 </manifest>

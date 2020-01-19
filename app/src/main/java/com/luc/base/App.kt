@@ -13,7 +13,7 @@ import org.koin.core.context.startKoin
 
 class App : MultiDexApplication() {
     companion object {
-        var forTesting: Boolean = true
+        var forTesting: Boolean = false
     }
 
     override fun onCreate() {

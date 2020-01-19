@@ -1,7 +1,6 @@
 package com.luc.base.core.api
 
 import com.ashokvarma.gander.GanderInterceptor
-import com.google.gson.GsonBuilder
 import com.luc.base.core.extension.getAppContext
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -12,16 +11,9 @@ import java.util.concurrent.TimeUnit
 object RetrofitFactory {
     fun retrofitService(): ApiService {
         return Retrofit.Builder()
-            .baseUrl("http://private-0e175-mluckypradana.apiary-mock.com/")
+            .baseUrl("http://private-0e175-mluckypradana.apiary-mock.com")
             .client(okHttpClient())
-            .addConverterFactory(
-                GsonConverterFactory.create(
-                    GsonBuilder()
-                        .excludeFieldsWithoutExposeAnnotation()
-                        .setPrettyPrinting()
-                        .create()
-                )
-            )
+            .addConverterFactory(GsonConverterFactory.create())
             .build().create(ApiService::class.java)
     }
 

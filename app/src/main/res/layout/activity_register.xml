@@ -90,6 +90,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:focusableInTouchMode="false"
+                            android:focusable="false"
                             android:hint="@string/label_dob" />
 
                     </com.google.android.material.textfield.TextInputLayout>
