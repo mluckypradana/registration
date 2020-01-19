@@ -8,6 +8,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import com.luc.base.core.helper.SessionStorage
 import com.luc.base.database.MyRoomDatabase
 import com.luc.base.repository.NoteRepo
+import com.luc.base.repository.UserRepo
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
@@ -17,6 +18,7 @@ object DbModule {
         single { provideDatabase(androidContext()) }
         single { get<MyRoomDatabase>().noteDao() }
         single { NoteRepo(get()) }
+        single { UserRepo() }
     }
 
     private fun provideDatabase(context: Context): MyRoomDatabase {
