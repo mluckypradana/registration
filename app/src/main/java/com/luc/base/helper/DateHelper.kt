@@ -58,9 +58,9 @@ object DateHelper {
 
     private fun parseDate(time: String?, inputPattern: String, outputPattern: String): String {
         if (time.isNullOrEmpty()) return ""
-        val localeId = Locale("in", "ID")
-        val inputFormat = SimpleDateFormat(inputPattern, localeId)
-        val outputFormat = SimpleDateFormat(outputPattern, localeId)
+        val locale = Locale("in", "EN")
+        val inputFormat = SimpleDateFormat(inputPattern, locale)
+        val outputFormat = SimpleDateFormat(outputPattern, locale)
         val date: Date?
         var str: String? = null
         try {
@@ -88,7 +88,7 @@ object DateHelper {
     }
 
     fun format(milis: Long?, format: String = Constant.DEFAULT_DATE_INPUT): String {
-        val format1 = SimpleDateFormat(format, Locale("id"))
+        val format1 = SimpleDateFormat(format, Locale("en"))
         return if (milis != null) format1.format(milis) else ""
     }
 

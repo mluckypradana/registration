@@ -35,31 +35,36 @@ open class RegisterVm(context: Application) : BaseViewModel(context) {
     }
 
     fun register(
-        onError: (String) -> Unit,
+        onInvalid: () -> Unit,
+        onError: (String?) -> Unit,
         onSuccess: (Resource<User>) -> Unit
     ) = viewModelScope.launch {
         val data = data.get() ?: User()
         val phoneInvalid = data.mobile.isInvalidPhone()
         val emailInvalid = data.email.isInvalidEmail()
         data.apply {
+            var isInvalid = true
             when {
                 phoneInvalid != 0 -> mobileNumberError.set(getString(phoneInvalid))
                 firstName.isEmpty() -> firstNameError.set(getString(R.string.error_empty_first_name))
                 lastName.isEmpty() -> lastNameError.set(getString(R.string.error_empty_last_name))
                 emailInvalid != 0 -> emailError.set(getString(emailInvalid))
                 else -> {
+                    isInvalid = false
                     mobileNumberError.set("")
                     firstNameError.set("")
                     lastNameError.set("")
                     emailError.set("")
+
+                    when (val res = repo.register(data)) {
+                        is Resource.Success<*> -> onSuccess(res)
+                        is Resource.Error -> res.message?.let { onError(it) }
+                    }
                 }
             }
+            if (isInvalid) onInvalid()
         }
 
-        when (val res = repo.register(data)) {
-            is Resource.Success<*> -> onSuccess(res)
-            is Resource.Error -> res.message?.let { onError(it) }
-        }
     }
 
     fun setDob(date: Calendar?) {

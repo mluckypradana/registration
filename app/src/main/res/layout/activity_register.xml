@@ -31,16 +31,15 @@
                 android:padding="@dimen/content">
 
                 <LinearLayout
+                    android:id="@+id/l_form"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:clickable="true"
                     android:orientation="vertical">
 
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        app:errorEnabled="true">
+                        android:layout_height="match_parent">
 
                         <com.google.android.material.textfield.TextInputEditText
                             style="@style/Input.Phone"
@@ -119,6 +118,7 @@
 
                         <com.google.android.material.textfield.TextInputEditText
                             style="@style/Input.Email"
+                            errorMessage="@{vm.emailError}"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/label_email"

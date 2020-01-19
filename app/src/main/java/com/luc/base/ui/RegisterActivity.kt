@@ -1,9 +1,11 @@
 package com.luc.base.ui
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.luc.base.R
+import com.luc.base.core.helper.Common
 import com.luc.base.databinding.ActivityRegisterBinding
 import com.luc.base.helper.ProfileHelper
 import com.luc.base.ui.register.RegisterVm
@@ -20,9 +22,18 @@ class RegisterActivity : AppCompatActivity() {
         bind = DataBindingUtil.setContentView(this, R.layout.activity_register)
         bind.vm = vm
         bind.bProceed.setOnClickListener {
+            showProgress()
             vm.register(
-                {},
-                {}
+                {
+                    hideProgress()
+                },
+                {
+                    hideProgress()
+                },
+                {
+                    hideProgress()
+                    enableLoginButton()
+                }
             )
         }
         bind.etDob.setOnClickListener {
@@ -33,4 +44,14 @@ class RegisterActivity : AppCompatActivity() {
         }
         setSupportActionBar(bind.toolbar.toolbar)
     }
+
+    private fun enableLoginButton() {
+        bind.lForm.alpha = 0.5f
+        bind.bLogin.visibility = View.VISIBLE
+    }
+
+    fun showProgress() = Common.showProgressDialog(this, R.string.message_loading)
+
+    fun hideProgress() = Common.dismissProgressDialog()
+
 }
