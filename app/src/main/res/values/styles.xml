@@ -38,21 +38,17 @@
 
     <style name="Input.Phone" parent="Input">
         <item name="android:digits">@string/digit_phone</item>
-        <!--<item name="android:hint">@string/hint_phone</item>-->
         <item name="android:inputType">number</item>
         <item name="android:maxLength">@integer/max_phone</item>
     </style>
 
     <style name="Input.Password" parent="Input">
-        <!--<item name="android:hint">@string/hint_password</item>-->
-        <!--        <item name="android:fontFamily">sans-serif</item>-->
         <item name="android:inputType">textPassword</item>
         <item name="android:maxLength">@integer/max_password</item>
     </style>
 
     <style name="Input.Pin" parent="Input">
         <item name="android:digits">@string/digit_phone</item>
-        <!--<item name="android:hint">@string/hint_pin</item>-->
         <item name="android:inputType">numberPassword</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:maxLength">@integer/max_pin</item>
@@ -60,21 +56,18 @@
 
     <style name="Input.Name" parent="Input">
         <item name="android:digits">@string/digit_name</item>
-        <!--<item name="android:hint">@string/hint_name</item>-->
         <item name="android:inputType">textCapWords</item>
         <item name="android:maxLength">@integer/max_name</item>
     </style>
 
     <style name="Input.Email" parent="Input">
         <item name="android:digits">@string/digit_email</item>
-        <!--<item name="android:hint">@string/hint_email</item>-->
         <item name="android:inputType">textEmailAddress</item>
         <item name="android:maxLength">@integer/max_email</item>
     </style>
 
     <style name="Input.Nominal" parent="Input">
         <item name="android:digits">@string/digit_nominal</item>
-        <!--<item name="android:hint">@string/hint_nominal</item>-->
         <item name="android:inputType">numberSigned</item>
         <item name="android:maxLength">@integer/max_nominal</item>
     </style>
