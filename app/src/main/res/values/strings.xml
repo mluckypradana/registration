@@ -8,17 +8,17 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
-    <string name="label_title">Title</string>
     <string name="action_add">Add</string>
-    <string name="error_common">Harap coba lagi</string>
-    <string name="message_loading">Harap tunggu</string>
+    <string name="error_common">Please try again</string>
+    <string name="message_loading">Please wait</string>
     <string name="action_ok">OK</string>
-    <string name="action_cancel">Batal</string>
-    <string name="error_empty_title">Harap isi judul</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="error_empty_title">Please enter title</string>
     <string name="cd_success">Success</string>
-    <string name="message_success">Sukses menambah data</string>
-    <string name="action_back">Kembali</string>
+    <string name="message_success">Success adding data</string>
+    <string name="action_back">Back</string>
     <string name="action_to_main">View Main Page</string>
+
     <string name="title_activity_register">Registration</string>
     <string name="action_register">Register</string>
 
@@ -48,13 +48,4 @@
     <string name="error_empty_last_name">Please last name</string>
     <string name="label_male">Male</string>
     <string name="label_female">Female</string>
-
-    <string-array name="gender_name">
-        <item>Laki-laki</item>
-        <item>Perempuan</item>
-    </string-array>
-    <string-array name="gender_value">
-        <item>1</item>
-        <item>2</item>
-    </string-array>
 </resources>

@@ -20,13 +20,12 @@ import java.util.*
 
 
 open class RegisterVm(context: Application) : BaseViewModel(context) {
+    private val repo: UserRepo by inject()
     var data: ObservableField<User> = ObservableField()
     var mobileNumberError: ObservableField<String> = ObservableField("")
     var firstNameError: ObservableField<String> = ObservableField("")
     var lastNameError: ObservableField<String> = ObservableField("")
     var emailError: ObservableField<String> = ObservableField("")
-    private val repo: UserRepo by inject()
-    private val genderNames = getAppContext().resources.getStringArray(R.array.gender_name)
 
     init {
         data = ObservableField(User())
@@ -64,7 +63,6 @@ open class RegisterVm(context: Application) : BaseViewModel(context) {
                 is Resource.Error -> res.message?.let { onError(it) }
             }
         }
-
     }
 
     fun setDob(date: Calendar?) {

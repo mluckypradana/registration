@@ -29,7 +29,7 @@ open class UserRepo : BaseRepository() {
                 Resource.Success(res.data, res.message)
             } else
                 Resource.Error(getErrorMessage(response))
-        } catch (e: UnknownHostException) {
+        } catch (e: Exception) {
             Resource.Error(getErrorMessage(e))
         }
     }

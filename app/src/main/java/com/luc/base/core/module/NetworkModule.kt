@@ -16,7 +16,7 @@ object NetworkModule {
     }
 
     private fun provideApiService(): ApiService {
-        return RetrofitFactory.retrofitService(true)
+        return RetrofitFactory.retrofitService()
     }
 
     private fun provideGson(): Gson? {
