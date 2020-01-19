@@ -31,11 +31,9 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         style="@style/Input.Phone"
-                        errorMessage="@{vm.mobileNumberError}"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/label_phone"
-                        android:text="@={vm.data.mobile}" />
+                        android:hint="@string/label_phone" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 

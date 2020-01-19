@@ -3,13 +3,17 @@ package com.luc.base.ui.register
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.forEach
 import androidx.databinding.DataBindingUtil
 import com.luc.base.R
+import com.luc.base.core.control.ActivityController
 import com.luc.base.core.helper.Common
 import com.luc.base.database.entity.User
 import com.luc.base.databinding.ActivityRegisterBinding
 import com.luc.base.helper.ProfileHelper
+import com.luc.base.ui.login.LoginActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
+
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -24,15 +28,11 @@ class RegisterActivity : AppCompatActivity() {
         bind.bProceed.setOnClickListener {
             showProgress()
             vm.register(
+                { hideProgress() },
+                { hideProgress() },
                 {
                     hideProgress()
-                },
-                {
-                    hideProgress()
-                },
-                {
-                    hideProgress()
-                    enableLoginButton()
+                    enableLoginState()
                 }
             )
         }
@@ -44,12 +44,13 @@ class RegisterActivity : AppCompatActivity() {
                 bind.etDob.setText(vm.data.get()?.getFormattedBirthDate())
             }
         }
+        bind.bLogin.setOnClickListener { ActivityController.navigateTo(this, LoginActivity::class.java) }
         setSupportActionBar(bind.toolbar.toolbar)
     }
 
-    private fun enableLoginButton() {
+    private fun enableLoginState() {
         bind.lForm.alpha = 0.5f
-        bind.lForm.isEnabled = false
+        bind.lForm.forEach { it.isEnabled = false }
         bind.bLogin.visibility = View.VISIBLE
     }
 
