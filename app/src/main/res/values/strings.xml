@@ -1,12 +1,5 @@
 <resources>
-    <string name="app_name">Android</string>
-    <string name="jwtKey">b054ppSjwT</string>
-    <string name="title_home">Home</string>
-    <string name="title_notes">Notes</string>
-    <string name="action_view_notes">View Notes</string>
-    <string name="title_activity_main2">Main2Activity</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="app_name">Registration</string>
 
     <string name="action_add">Add</string>
     <string name="error_common">Please try again</string>
@@ -19,9 +12,6 @@
     <string name="action_back">Back</string>
     <string name="action_to_main">View Main Page</string>
 
-    <string name="title_activity_register">Registration</string>
-    <string name="action_register">Register</string>
-
     <!--Allowed digits-->
     <string name="digit_input">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890, .@#$%^*()"':;!?/\|</string>
     <string name="digit_no_separator">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789 0</string>
@@ -32,21 +22,23 @@
     <string name="digit_name">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY Z</string>
     <string name="digit_email">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@._</string>
     <string name="digit_password">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&amp;*()`~-_=+[{]}|;:\'"/?.&gt;,&lt;</string>
+
+    <string name="title_activity_register">Registration</string>
+    <string name="title_activity_login">Login</string>
     <string name="label_phone">Mobile number</string>
     <string name="label_first_name">First name</string>
     <string name="label_last_name">Last name</string>
     <string name="label_dob">Date of Birth</string>
     <string name="label_gender">Gender</string>
     <string name="label_email">Email</string>
+    <string name="label_male">Male</string>
+    <string name="label_female">Female</string>
     <string name="action_login">Login</string>
-
+    <string name="action_register">Register</string>
     <string name="error_empty_email">Please enter email</string>
     <string name="error_empty_phone">Please enter phone number</string>
     <string name="error_invalid_phone">Please enter valid Indonesian phone number</string>
     <string name="error_invalid_email">Please enter valid email</string>
     <string name="error_empty_first_name">Please enter first name</string>
     <string name="error_empty_last_name">Please last name</string>
-    <string name="label_male">Male</string>
-    <string name="label_female">Female</string>
-    <string name="title_activity_login">Login</string>
 </resources>
