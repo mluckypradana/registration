@@ -83,10 +83,6 @@ object DateHelper {
         return parseDate(dateText, inputPattern, outputPattern)
     }
 
-    fun reformat(dateText: String?, inputPattern: String, outputPattern: String): String? {
-        return parseDate(dateText, inputPattern, outputPattern)
-    }
-
     fun format(milis: Long?, format: String = Constant.DEFAULT_DATE_INPUT): String {
         val format1 = SimpleDateFormat(format, Locale("en"))
         return if (milis != null) format1.format(milis) else ""
@@ -97,30 +93,4 @@ object DateHelper {
     private const val HOUR_MILLIS = 60 * MINUTE_MILLIS
     private const val DAY_MILLIS = 24 * HOUR_MILLIS
 
-    fun getRelativeTimeFormat(date: String?): String {
-        val format = SimpleDateFormat(Constant.DEFAULT_TIME_INPUT, Locale.ENGLISH)
-        var time = try {
-            format.parse(date.orEmpty())?.time ?: 0L
-        } catch (e: ParseException) {
-            0L
-        }
-        if (time < 1000000000000L)
-            time *= 1000
-        val now = System.currentTimeMillis()
-        if (time > now || time <= 0) {
-            val cal = Calendar.getInstance()
-            cal.time.time = time
-            return reformat(date)
-        }
-        val diff = now - time
-        return when {
-            diff < MINUTE_MILLIS -> "Sekarang"
-            diff < 2 * MINUTE_MILLIS -> "semenit lalu"
-            diff < 50 * MINUTE_MILLIS -> (diff / MINUTE_MILLIS).toString() + " menit yang lalu"
-            diff < 90 * MINUTE_MILLIS -> "an hour ago"
-            diff < 24 * HOUR_MILLIS -> (diff / HOUR_MILLIS).toString() + " jam yang lalu"
-            diff < 48 * HOUR_MILLIS -> "kemarin"
-            else -> (diff / DAY_MILLIS).toString() + " hari yang lalu"
-        }
-    }
 }
