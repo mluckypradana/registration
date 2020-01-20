@@ -2,15 +2,15 @@
 
 buildscript {
     ext {
-        kotlin_version = '1.3.50'
+        kotlin_version = '1.3.61'
         koin_version = '2.0.1'
-        nav_version = "2.1.0-rc01"
-        gson_version = "2.8.4"
-        retrofit_version = "2.6.0"
+        nav_version = '2.2.0-rc04'
+        gson_version = '2.8.6'
+        retrofit_version = '2.7.1'
         gander_version = "3.1.0"
-        okhttp_version = "4.0.1"
-        roomVersion = '2.2.1'
-        archLifecycleVersion = '2.2.0-rc02'
+        okhttp_version = '4.3.1'
+        roomVersion = '2.2.3'
+        archLifecycleVersion = '2.2.0-rc03'
         androidxArchVersion = '2.1.0'
     }
     repositories {
@@ -19,7 +19,7 @@ buildscript {
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.2'
+        classpath 'com.android.tools.build:gradle:3.5.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
         // NOTE: Do not place your application dependencies here; they belong

@@ -8,7 +8,6 @@ import com.luc.base.core.api.ApiService
 import com.luc.base.core.api.ErrorResp
 import com.luc.base.core.extension.getString
 import com.luc.base.core.helper.Common
-import com.luc.base.core.helper.SessionStorage
 import com.luc.base.core.helper.toGson
 import org.koin.core.KoinComponent
 import org.koin.core.inject
@@ -18,7 +17,6 @@ import java.lang.reflect.Type
 
 open class BaseRepository : KoinComponent {
     internal val api: ApiService by inject()
-    internal val sessionStorage: SessionStorage by inject()
 
     fun <T> Response<BaseResp<T>>.getResponse(): BaseResp<T> {
         if (code() == 401)

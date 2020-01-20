@@ -2,6 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+
+        <variable
+            name="vm"
+            type="com.luc.base.ui.login.LoginVm" />
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +39,8 @@
                         style="@style/Input.Phone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/label_phone" />
+                        android:hint="@string/label_phone"
+                        android:text="@={vm.mobile}" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 

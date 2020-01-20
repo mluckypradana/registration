@@ -29,6 +29,7 @@ open class RegisterVm(context: Application) : BaseViewModel(context) {
 
     init {
         data = ObservableField(User())
+        viewModelScope.launch { repo.getUsers() }
     }
 
     fun register(
@@ -39,10 +40,12 @@ open class RegisterVm(context: Application) : BaseViewModel(context) {
         val data = data.get() ?: User()
         val phoneInvalid = data.mobile.isInvalidPhone()
         val emailInvalid = data.email.isInvalidEmail()
+        val phoneExists = repo.isMobileNumberExists(data.mobile)
         data.apply {
             var isInvalid = true
             when {
                 phoneInvalid != 0 -> mobileNumberError.set(getString(phoneInvalid))
+                phoneExists -> mobileNumberError.set(getString(R.string.error_unique_phone))
                 firstName.isEmpty() -> firstNameError.set(getString(R.string.error_empty_first_name))
                 lastName.isEmpty() -> lastNameError.set(getString(R.string.error_empty_last_name))
                 emailInvalid != 0 -> emailError.set(getString(emailInvalid))

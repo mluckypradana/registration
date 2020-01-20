@@ -41,4 +41,6 @@
     <string name="error_invalid_email">Please enter valid email</string>
     <string name="error_empty_first_name">Please enter first name</string>
     <string name="error_empty_last_name">Please last name</string>
+    <string name="error_unique_phone">Phone number registered already</string>
+    <string name="error_no_user">Phone number is not yet registered</string>
 </resources>
