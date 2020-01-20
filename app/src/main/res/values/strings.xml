@@ -43,4 +43,5 @@
     <string name="error_empty_last_name">Please last name</string>
     <string name="error_unique_phone">Phone number registered already</string>
     <string name="error_no_user">Phone number is not yet registered</string>
+    <string name="message_greetings_value">Hello, %s</string>
 </resources>

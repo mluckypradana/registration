@@ -42,6 +42,11 @@ open class RegisterVm(context: Application) : BaseViewModel(context) {
         val emailInvalid = data.email.isInvalidEmail()
         val phoneExists = repo.isMobileNumberExists(data.mobile)
         data.apply {
+            mobileNumberError.set("")
+            firstNameError.set("")
+            lastNameError.set("")
+            emailError.set("")
+
             var isInvalid = true
             when {
                 phoneInvalid != 0 -> mobileNumberError.set(getString(phoneInvalid))
@@ -55,11 +60,6 @@ open class RegisterVm(context: Application) : BaseViewModel(context) {
                 onInvalid()
                 return@launch
             }
-
-            mobileNumberError.set("")
-            firstNameError.set("")
-            lastNameError.set("")
-            emailError.set("")
 
             when (val res = repo.register(data)) {
                 is Resource.Success -> onSuccess(res)

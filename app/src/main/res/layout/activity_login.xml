@@ -39,6 +39,7 @@
                         style="@style/Input.Phone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        errorMessage="@{vm.mobileNumberError}"
                         android:hint="@string/label_phone"
                         android:text="@={vm.mobile}" />
 

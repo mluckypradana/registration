@@ -19,8 +19,14 @@ class LoginActivity : AppCompatActivity() {
             showProgress()
             vm.login(
                 { hideProgress() },
-                { hideProgress() },
-                { hideProgress() }
+                {
+                    hideProgress()
+                    Common.showMessageDialog(this@LoginActivity, it)
+                },
+                {
+                    hideProgress()
+                    Common.showMessageDialog(this@LoginActivity, vm.getGreetingsMessage(it))
+                }
             )
         }
         setSupportActionBar(bind.toolbar.toolbar)
