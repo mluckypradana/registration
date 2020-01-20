@@ -3,7 +3,7 @@ package com.luc.base.database.entity
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
-import com.luc.base.helper.DateHelper
+import com.luc.base.core.helper.DateHelper
 
 /**
  * Created by MuhammadLucky on 14/05/2018.

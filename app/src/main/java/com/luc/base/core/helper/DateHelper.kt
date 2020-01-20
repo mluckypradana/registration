@@ -1,4 +1,4 @@
-package com.luc.base.helper
+package com.luc.base.core.helper
 
 import com.luc.base.core.Constant
 import java.text.ParseException
@@ -37,7 +37,11 @@ object DateHelper {
         val outputPattern =
             if (containsTime) Constant.DEFAULT_TIME_OUTPUT
             else Constant.DEFAULT_DATE_OUTPUT
-        return parseDate(dateText, inputPattern, outputPattern)
+        return parseDate(
+            dateText,
+            inputPattern,
+            outputPattern
+        )
     }
 
     fun format(milis: Long?, format: String = Constant.DEFAULT_DATE_INPUT): String {
