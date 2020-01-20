@@ -15,6 +15,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bind = DataBindingUtil.setContentView(this, R.layout.activity_login)
+        bind.vm = vm
         bind.bProceed.setOnClickListener {
             showProgress()
             vm.login(
